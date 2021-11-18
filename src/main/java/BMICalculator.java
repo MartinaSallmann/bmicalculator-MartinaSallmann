@@ -56,17 +56,13 @@ public class BMICalculator {
 
     private double round(double value) {
 
-        double height_new = getBodyHeight();
-        height_new = height_new/100;
-
         return Math.round(value * 100) / 100D;
     }
 
     public double calculateBMI() {
-
-        return round(bodyWeight / ((bodyHeight / 100) * (bodyHeight / 100)));
-
+        return round(bodyWeight / (( (double)bodyHeight / 100) * ( (double)bodyHeight / 100)));
     }
+
 
     public int calculateBMICategory() {
 
